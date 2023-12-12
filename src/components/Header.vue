@@ -21,7 +21,7 @@ export default {
 <template>
   <header class="d-flex align-items-center p-3">
     <Logo />
-    <h1 class="m-0 fw-normal">Yu-Gi-Oh-Api</h1>
+    <h1 class="m-0 fw-normal">Yu-Gi-Oh Api</h1>
   </header>
 </template>
 
@@ -29,6 +29,4 @@ export default {
 // USES
 
 // /USES
-
-h1 {}
 </style>
