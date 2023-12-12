@@ -5,12 +5,14 @@
 
 // /IMPORTS
 
-export default {}
+export default {
+
+}
 </script>
 
 <template>
   <div class="pic-container mx-4">
-    <img src="../../public/logo.png" alt="">
+    <img src="/public/logo.png" alt="">
   </div>
 </template>
 

@@ -2,7 +2,7 @@
 // IMPORTS
 import MainSingleCard from './MainSingleCard.vue';
 import { store } from '../store';
-import axios from 'axios';
+
 
 
 // /IMPORTS
@@ -16,11 +16,7 @@ export default {
 
     }
   },
-  created() {
-    axios.get(store.apiURL).then(response => {
-      store.cards = response.data.data;
-    })
-  },
+
   methods: {},
   mounted() { },
 }
@@ -47,7 +43,7 @@ export default {
 
 header {
 
-  background-color: $list-header-bg;
+  background-color: $secondary-color;
 
   h5 {
     font-size: 1rem;

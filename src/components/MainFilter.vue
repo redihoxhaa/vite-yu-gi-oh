@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div class="col-md-4 py-4">
+  <div class="col-md-4 py-4 ms-3">
     <select id="inputFilter" class="form-select" aria-label="inputFilter">
       <option selected>Alien</option>
       <option>...</option>
