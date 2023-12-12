@@ -23,7 +23,7 @@ export default {
   <main>
     <div class="container">
       <MainFilter />
-      <div class="nested container p-5">
+      <div class="nested p-5">
         <MainCardList />
       </div>
     </div>
@@ -40,7 +40,7 @@ export default {
 main {
   background-color: $main-color;
 
-  .nested.container {
+  .nested {
     background-color: white;
   }
 }

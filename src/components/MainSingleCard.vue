@@ -42,7 +42,7 @@ export default {
 
 .single-card {
   background-color: $main-color;
-  aspect-ratio: 9 / 19;
+  aspect-ratio: 9 / 21;
 
   h5 {
     color: white;
