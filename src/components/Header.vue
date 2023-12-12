@@ -10,7 +10,7 @@ export default {
   components: { Logo },
   data() {
     return {
-
+      bigLogo: "big-logo",
     }
   },
   methods: {},

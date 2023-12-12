@@ -6,10 +6,10 @@ import Logo from './Logo.vue';
 // /IMPORTS
 
 export default {
-  props: [],
   components: { Logo },
   data() {
     return {
+      bigLogo: "big-logo",
     }
   },
   methods: {},
@@ -21,7 +21,7 @@ export default {
   <div class="loading-page d-flex flex-column align-items-center justify-content-center">
     <h2>Sto caricando..</h2>
     <img src="../assets/img/spinner.gif" alt="Spinner" class="my-4">
-    <Logo />
+    <Logo :logoWidth="bigLogo" />
   </div>
 </template>
 

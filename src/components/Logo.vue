@@ -6,13 +6,13 @@
 // /IMPORTS
 
 export default {
-
+  props: ['logoWidth'],
 }
 </script>
 
 <template>
-  <div class="pic-container mx-4">
-    <img src="/public/logo.png" alt="">
+  <div class="pic-container mx-4" :class="logoWidth">
+    <img src="/logo.png" alt="">
   </div>
 </template>
 
