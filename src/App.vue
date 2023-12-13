@@ -15,9 +15,26 @@ export default {
   components: { LoadingPage, Header, Main, Footer },
   created() {
     axios.get(store.apiURL).then(response => {
-      store.cards = response.data.data;
+      this.store.cards = response.data.data;
     })
-  }
+  },
+  methods: {
+    getCards() {
+      if (this.store.chosenArchetype !== '') {
+        axios.get(store.apiURL, {
+          params: {
+            archetype: this.store.chosenArchetype
+          }
+        }).then(response => {
+          this.store.cards = response.data.data;
+        })
+      } else {
+        axios.get(store.apiURL).then(response => {
+          this.store.cards = response.data.data;
+        })
+      }
+    }
+  },
 }
 </script>
 
@@ -25,7 +42,7 @@ export default {
   <LoadingPage v-if="store.cards.length === 0" />
   <div class="else" v-else>
     <Header />
-    <Main />
+    <Main @searchIt="getCards()" />
     <Footer />
   </div>
 </template>

@@ -1,7 +1,10 @@
 <script>
+
+
 // IMPORTS
 
-
+import axios from 'axios';
+import { store } from '../store';
 
 // /IMPORTS
 
@@ -10,19 +13,31 @@ export default {
   components: {},
   data() {
     return {
+      store,
 
     }
   },
-  methods: {},
+  created() {
+    axios.get(store.searchArchetypeURL).then(response => {
+      store.archetypesArray = response.data;
+    })
+  },
+  methods: {
+
+  },
   mounted() { },
 }
 </script>
 
 <template>
   <div class="col-md-4 py-4 ms-3">
-    <select id="inputFilter" class="form-select" aria-label="inputFilter">
-      <option selected>Alien</option>
-      <option>...</option>
+    <select id="inputFilter" class="form-select" aria-label="inputFilter" v-model="store.chosenArchetype"
+      @change="$emit('tellToSearchIt')">
+      <option value="" selected disabled>Select Archetype</option>
+      <option value="">All</option>
+      <option v-for="archetype in store.archetypesArray" :value="archetype.archetype_name">{{ archetype.archetype_name }}
+      </option>
+
     </select>
   </div>
 </template>
@@ -35,7 +50,7 @@ export default {
 // /USES
 
 .form-select {
-  width: 160px;
+  width: 250px;
 }
 </style>
 

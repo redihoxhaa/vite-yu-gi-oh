@@ -22,7 +22,7 @@ export default {
 <template>
   <main>
     <div class="container">
-      <MainFilter />
+      <MainFilter @tellToSearchIt="$emit('searchIt')" />
       <div class="nested p-5">
         <MainCardList />
       </div>
